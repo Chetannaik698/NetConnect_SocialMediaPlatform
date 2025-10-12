@@ -1,0 +1,234 @@
+.scrollComponent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+  max-width: 80%; /* keeps feed centered like social apps */
+}
+
+.createPostContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(255, 248, 248);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.userProfile {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+.textAreaofContent {
+  flex: 1;
+  min-height: 70px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.8rem 1rem;
+  outline: none;
+  resize: none; /* avoid stretching */
+}
+
+.Fab {
+  background: rgba(0, 0, 255, 0.944);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.Fab > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.uploadButton {
+  margin-top: 0.5rem;
+  align-self: flex-end;
+  background-color: rgba(0, 0, 255, 0.7);
+  color: white;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.singleCard {
+  background: white;
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+.singleCard_profileContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  padding-right: 3.4rem;
+}
+
+.singleCard_image {
+  width: 100%;
+  padding-top: 0.6rem;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.singleCard_image > img {
+  width: 100%;
+  border-radius: 30px;
+  height: auto;
+  object-fit: cover;
+}
+.optionsContainer {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  padding-block: 0.6rem;
+}
+.singleOption__optionContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+}
+.singleOption__optionContainer > svg {
+  height: 100%;
+  min-width: 1rem;
+  cursor: pointer;
+  width: 8%;
+}
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allcommentsContainer {
+  min-width: 40svh;
+  max-width: 1120px;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  padding: 1rem;
+}
+
+.commentsWrapper {
+  flex: 1; 
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 0.5rem; 
+}
+
+
+.singleComment {
+  background-color: #f9f9f9;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  word-break: break-word;
+}
+
+.singleComment:hover {
+  transform: translateY(-2px);
+}
+
+.singleComment__profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.commentProfilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.commentUserInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentUserName {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.commentUserUsername {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 0;
+}
+
+.commentBody {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.postCommentContainer {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.postCommentContainer > input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgb(228,228,228);
+}
+
+.postCommentContainer > input:focus {
+  border: 1px solid silver;
+}
+
+.postCommentContainer_commentBtn {
+  padding: 0.8rem 1.2rem;
+  background: orange;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .allcommentsContainer{
+      width: 90%;
+    }
+}
