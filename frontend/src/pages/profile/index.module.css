@@ -213,68 +213,12 @@
     font-size: 1.3rem;
   }
 }
-
-@media (max-width: 600px) {
-  .container {
-    padding: 0.8rem;
-    gap: 1rem;
-  }
-
-  .backDropContainer {
-    height: 22vh;
-    border-radius: 15px;
-  }
-
-  .backDropContainer > img,
-  .backDrop__overlay {
-    width: 5.5em;
-    height: 5.5em;
-    bottom: -20%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .profileContainer_details {
-    padding-top: 3.5rem;
-    text-align: center;
-  }
-
-  .card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-  }
-
-  .card_profileContainer > img {
-    width: 2.8rem;
-  }
-
-  .connectBtn,
-  .connectedButton,
-  .updateProfiledata,
-  .addWorkButton {
-    font-size: 0.9rem;
-    padding-inline: 0.8rem;
-    padding-block: 0.4rem;
-  }
-
-  .workHistoryContaier {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-  }
-
-  .workHistoryCard {
-    width: 90%;
-    text-align: center;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-  }
-
-  .nameEdit {
-    font-size: 1.2rem;
-  }
+.profileContainer__flex {
+  display: flex;
+  gap: 0.7rem;
+}
+@media only screen and (max-width: 600px) {
+    .profileContainer__flex{
+        flex-direction: column;
+    }
 }
